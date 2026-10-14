@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sir M. Visvesvaraya engineering motif: blueprint grid + KRS-style dam outline +
+     gear + ruler + compass. Symbolic, no portrait, no faces. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Blueprint grid (soft) -->
+  <g stroke-width="0.4" opacity="0.25">
+    <line x1="0" y1="40" x2="600" y2="40"/>
+    <line x1="0" y1="80" x2="600" y2="80"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="160" x2="600" y2="160"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="280" x2="600" y2="280"/>
+    <line x1="0" y1="320" x2="600" y2="320"/>
+    <line x1="0" y1="360" x2="600" y2="360"/>
+    <line x1="40" y1="0" x2="40" y2="400"/>
+    <line x1="80" y1="0" x2="80" y2="400"/>
+    <line x1="120" y1="0" x2="120" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="240" y1="0" x2="240" y2="400"/>
+    <line x1="280" y1="0" x2="280" y2="400"/>
+    <line x1="320" y1="0" x2="320" y2="400"/>
+    <line x1="360" y1="0" x2="360" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="440" y1="0" x2="440" y2="400"/>
+    <line x1="480" y1="0" x2="480" y2="400"/>
+    <line x1="520" y1="0" x2="520" y2="400"/>
+    <line x1="560" y1="0" x2="560" y2="400"/>
+  </g>
+
+  <!-- Corner tick marks (blueprint frame) -->
+  <g stroke-width="1.4">
+    <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
+    <path d="M 580 20 L 580 50 M 580 20 L 550 20"/>
+    <path d="M 20 380 L 20 350 M 20 380 L 50 380"/>
+    <path d="M 580 380 L 580 350 M 580 380 L 550 380"/>
+  </g>
+
+  <!-- Dam profile (KRS-inspired arch + spillway) — left half -->
+  <g transform="translate(60 180)">
+    <!-- Reservoir water line -->
+    <line x1="0" y1="60" x2="220" y2="60" stroke-width="0.8" opacity="0.6"/>
+    <line x1="6" y1="68" x2="220" y2="68" stroke-width="0.6" opacity="0.4"/>
+    <line x1="12" y1="76" x2="220" y2="76" stroke-width="0.6" opacity="0.4"/>
+    <!-- Dam body -->
+    <path d="M 0 60 L 0 160 L 60 160 L 80 80 L 220 80 L 220 60" stroke-width="1.6"/>
+    <!-- Spillway arches -->
+    <path d="M 90 80 Q 100 100 110 80"/>
+    <path d="M 120 80 Q 130 100 140 80"/>
+    <path d="M 150 80 Q 160 100 170 80"/>
+    <path d="M 180 80 Q 190 100 200 80"/>
+    <!-- Downstream flow -->
+    <path d="M 100 110 Q 110 130 105 150" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 130 110 Q 140 130 135 150" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 160 110 Q 170 130 165 150" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 190 110 Q 200 130 195 150" stroke-width="0.8" opacity="0.5"/>
+    <!-- Crest pillars -->
+    <line x1="60" y1="80" x2="60" y2="160" stroke-width="0.8"/>
+  </g>
+
+  <!-- Gear (top-right) -->
+  <g transform="translate(440 100)">
+    <circle cx="0" cy="0" r="46" stroke-width="1.6"/>
+    <circle cx="0" cy="0" r="20" stroke-width="1.2"/>
+    <circle cx="0" cy="0" r="6" fill="currentColor" stroke="none"/>
+    <!-- 12 teeth -->
+    <g stroke-width="1.4">
+      <line x1="0" y1="-46" x2="0" y2="-58"/>
+      <line x1="23" y1="-40" x2="29" y2="-50"/>
+      <line x1="40" y1="-23" x2="50" y2="-29"/>
+      <line x1="46" y1="0" x2="58" y2="0"/>
+      <line x1="40" y1="23" x2="50" y2="29"/>
+      <line x1="23" y1="40" x2="29" y2="50"/>
+      <line x1="0" y1="46" x2="0" y2="58"/>
+      <line x1="-23" y1="40" x2="-29" y2="50"/>
+      <line x1="-40" y1="23" x2="-50" y2="29"/>
+      <line x1="-46" y1="0" x2="-58" y2="0"/>
+      <line x1="-40" y1="-23" x2="-50" y2="-29"/>
+      <line x1="-23" y1="-40" x2="-29" y2="-50"/>
+    </g>
+  </g>
+
+  <!-- Ruler (bottom) -->
+  <g transform="translate(60 340)">
+    <rect x="0" y="0" width="480" height="22" stroke-width="1.4"/>
+    <g stroke-width="1">
+      <line x1="20" y1="0" x2="20" y2="14"/>
+      <line x1="40" y1="0" x2="40" y2="8"/>
+      <line x1="60" y1="0" x2="60" y2="8"/>
+      <line x1="80" y1="0" x2="80" y2="8"/>
+      <line x1="100" y1="0" x2="100" y2="14"/>
+      <line x1="120" y1="0" x2="120" y2="8"/>
+      <line x1="140" y1="0" x2="140" y2="8"/>
+      <line x1="160" y1="0" x2="160" y2="8"/>
+      <line x1="180" y1="0" x2="180" y2="14"/>
+      <line x1="200" y1="0" x2="200" y2="8"/>
+      <line x1="220" y1="0" x2="220" y2="8"/>
+      <line x1="240" y1="0" x2="240" y2="8"/>
+      <line x1="260" y1="0" x2="260" y2="14"/>
+      <line x1="280" y1="0" x2="280" y2="8"/>
+      <line x1="300" y1="0" x2="300" y2="8"/>
+      <line x1="320" y1="0" x2="320" y2="8"/>
+      <line x1="340" y1="0" x2="340" y2="14"/>
+      <line x1="360" y1="0" x2="360" y2="8"/>
+      <line x1="380" y1="0" x2="380" y2="8"/>
+      <line x1="400" y1="0" x2="400" y2="8"/>
+      <line x1="420" y1="0" x2="420" y2="14"/>
+      <line x1="440" y1="0" x2="440" y2="8"/>
+      <line x1="460" y1="0" x2="460" y2="8"/>
+    </g>
+  </g>
+
+  <!-- Compass / divider (top-left of dam) -->
+  <g transform="translate(380 240)">
+    <line x1="0" y1="0" x2="-24" y2="36"/>
+    <line x1="0" y1="0" x2="24" y2="36"/>
+    <circle cx="0" cy="0" r="4" fill="currentColor" stroke="none"/>
+    <path d="M -22 32 A 28 28 0 0 0 22 32" stroke-width="0.8" opacity="0.6"/>
+  </g>
+</svg>

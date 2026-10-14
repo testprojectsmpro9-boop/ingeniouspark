@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    overflow-x: clip;
+  }
+
+  body,
+  #root {
+    min-height: 100%;
+    overflow-x: clip;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  img,
+  video {
+    display: block;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Body paragraph text — justify for clean professional layout */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  section {
+    scroll-margin-top: 88px;
+  }
+
+  /* GPU-accelerated elements */
+  .magnetic-btn {
+    will-change: transform;
+  }
+
+  /* TypeWriter character — cheap opacity-only composite */
+  .tw-c {
+    will-change: opacity;
+    display: inline;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #002B5C, #1a5276, #D4A017);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-dark {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* GPU promotion for 3D-transformed elements */
+  [style*="transform-style: preserve-3d"],
+  [style*="perspective"] {
+    transform: translateZ(0);
+  }
+}
+
+/* ─── Mobile optimisations ──────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  /* Reduce costly backdrop-blur on mobile GPUs */
+  .glass,
+  .glass-dark {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* Disable parallax blobs — too heavy on low-end mobile */
+  .blob-1, .blob-2, .blob-3 {
+    display: none;
+  }
+
+  /* Magnetic-btn: on touch screens no will-change needed */
+  .magnetic-btn {
+    will-change: auto;
+  }
+
+  /* Flip card transitions — GPU-composited on mobile */
+  [style*="transform-style: preserve-3d"] {
+    will-change: transform;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+
+  /* Reason cards — smooth scale + color transition */
+  .reason-card {
+    transition: transform 0.35s ease, background-color 0.35s ease,
+                border-color 0.35s ease, box-shadow 0.3s ease !important;
+  }
+
+  /* Reduce stagger delays so mobile feels snappy */
+  [data-framer-motion] {
+    --motion-delay-scale: 0.4;
+  }
+
+  /* Ensure no text overflow / horizontal scroll */
+  section {
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a,
+  button,
+  span {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ─── Reduced-motion override ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .tw-c {
+    opacity: 1 !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  /* Let Framer Motion / GSAP handle the rest via the prefersReducedMotion prop */
+}

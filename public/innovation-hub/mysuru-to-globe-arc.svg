@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mysuru-to-Bharat-to-globe arc map.
+     Abstract sphere + abstract continent strokes — NOT a political map.
+     Three stops: Mysuru pin (gold), India region (navy stroke abstract), globe arc (cyan).
+     stroke="currentColor" on the connecting arc, explicit accents on stops. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <defs>
+    <linearGradient id="ihArcGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D4A017"/>
+      <stop offset="55%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <radialGradient id="ihGlobeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft latitude lines (atmosphere) -->
+  <g stroke="currentColor" stroke-width="0.6" opacity="0.25">
+    <path d="M 40 360 Q 450 320 860 360"/>
+    <path d="M 40 320 Q 450 240 860 320"/>
+    <path d="M 40 280 Q 450 170 860 280"/>
+  </g>
+
+  <!-- Connecting arc (main story line) — drawn with gradient -->
+  <path d="M 140 360 C 280 100, 620 100, 760 360"
+        stroke="url(#ihArcGrad)" stroke-width="3" fill="none"/>
+
+  <!-- Stop 1: Mysuru (left) -->
+  <g transform="translate(140 360)">
+    <!-- pin -->
+    <circle r="22" fill="url(#ihGlobeGlow)"/>
+    <path d="M 0 -28 C -16 -28 -16 -8 0 4 C 16 -8 16 -28 0 -28 Z" fill="#D4A017" stroke="#D4A017"/>
+    <circle cx="0" cy="-18" r="4" fill="#FFF5D6"/>
+    <text x="0" y="36" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#D4A017" stroke="none">MYSURU</text>
+    <text x="0" y="54" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="600" fill="#002B5C" stroke="none" opacity="0.7">Origin</text>
+  </g>
+
+  <!-- Stop 2: Bharat (middle) — abstract diamond + concentric ring, NOT a political outline -->
+  <g transform="translate(450 130)">
+    <circle r="40" fill="url(#ihGlobeGlow)"/>
+    <!-- Abstract subcontinent: stylised inverted triangle, no real borders -->
+    <path d="M -28 -20 L 28 -20 L 0 36 Z" stroke="#002B5C" stroke-width="2" fill="rgba(212,160,23,0.08)"/>
+    <circle cx="0" cy="-2" r="3" fill="#002B5C"/>
+    <text x="0" y="58" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#002B5C" stroke="none">BHARAT</text>
+    <text x="0" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="600" fill="#002B5C" stroke="none" opacity="0.7">National network</text>
+  </g>
+
+  <!-- Stop 3: Globe (right) -->
+  <g transform="translate(760 360)">
+    <circle r="44" fill="url(#ihGlobeGlow)"/>
+    <circle r="36" stroke="#06b6d4" stroke-width="2" fill="none"/>
+    <ellipse cx="0" cy="0" rx="36" ry="12" stroke="#06b6d4" stroke-width="1.2" fill="none" opacity="0.7"/>
+    <ellipse cx="0" cy="0" rx="14" ry="36" stroke="#06b6d4" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <!-- abstract continent dabs (NOT real geography) -->
+    <path d="M -22 -8 Q -16 -14 -8 -10 Q -10 -2 -18 0 Z" fill="#06b6d4" opacity="0.35"/>
+    <path d="M 6 -16 Q 18 -18 22 -10 Q 16 -4 8 -8 Z" fill="#06b6d4" opacity="0.35"/>
+    <path d="M -6 10 Q 4 12 12 18 Q 4 22 -6 18 Z" fill="#06b6d4" opacity="0.35"/>
+    <text x="0" y="64" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="800" letter-spacing="2" fill="#06b6d4" stroke="none">WORLD</text>
+    <text x="0" y="82" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="600" fill="#002B5C" stroke="none" opacity="0.7">IFIA · ABIPIR</text>
+  </g>
+
+  <!-- Travel markers along the arc -->
+  <g fill="currentColor" stroke="none" opacity="0.55">
+    <circle cx="250" cy="220" r="3"/>
+    <circle cx="340" cy="160" r="3"/>
+    <circle cx="450" cy="138" r="3"/>
+    <circle cx="560" cy="160" r="3"/>
+    <circle cx="650" cy="220" r="3"/>
+  </g>
+</svg>

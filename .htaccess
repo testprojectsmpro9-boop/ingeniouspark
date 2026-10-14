@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# Force HTTPS on Apache/cPanel hosting.
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Serve the React route even though /innovation-hub is also an assets folder.
+RewriteCond %{REQUEST_URI} ^/innovation-hub/?$
+RewriteRule ^ index.html [L]
+
+# Let real files and folders load normally.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Frontend route fallback for the Vite single page app.
+RewriteRule ^ index.html [L]

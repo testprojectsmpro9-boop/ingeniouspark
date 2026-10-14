@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mysore Palace inspired silhouette. Abstract / line-art. No specific architectural reproduction.
+     Use stroke="currentColor" so the consumer (Tailwind text-[color]) controls colour. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Ground line -->
+  <line x1="0" y1="208" x2="800" y2="208" stroke-width="1"/>
+
+  <!-- Left wing -->
+  <path d="M 40 208 V 140 H 160 V 208"/>
+  <line x1="60" y1="208" x2="60" y2="150"/>
+  <line x1="80" y1="208" x2="80" y2="150"/>
+  <line x1="100" y1="208" x2="100" y2="150"/>
+  <line x1="120" y1="208" x2="120" y2="150"/>
+  <line x1="140" y1="208" x2="140" y2="150"/>
+  <path d="M 40 140 L 100 110 L 160 140 Z"/>
+  <circle cx="100" cy="100" r="6"/>
+  <line x1="100" y1="94" x2="100" y2="82"/>
+  <path d="M 96 82 L 100 76 L 104 82"/>
+
+  <!-- Central main hall + dome -->
+  <path d="M 200 208 V 100 H 600 V 208"/>
+  <!-- Pillared arches -->
+  <g stroke-width="1.2">
+    <path d="M 220 208 V 130 Q 220 122 228 122 H 252 Q 260 122 260 130 V 208"/>
+    <path d="M 280 208 V 130 Q 280 122 288 122 H 312 Q 320 122 320 130 V 208"/>
+    <path d="M 340 208 V 130 Q 340 122 348 122 H 372 Q 380 122 380 130 V 208"/>
+    <path d="M 420 208 V 130 Q 420 122 428 122 H 452 Q 460 122 460 130 V 208"/>
+    <path d="M 480 208 V 130 Q 480 122 488 122 H 512 Q 520 122 520 130 V 208"/>
+    <path d="M 540 208 V 130 Q 540 122 548 122 H 572 Q 580 122 580 130 V 208"/>
+  </g>
+  <!-- Roof line + central dome -->
+  <path d="M 200 100 L 400 60 L 600 100"/>
+  <path d="M 360 60 Q 360 20 400 18 Q 440 20 440 60"/>
+  <path d="M 376 18 Q 376 6 400 4 Q 424 6 424 18"/>
+  <line x1="400" y1="4" x2="400" y2="-6" transform="translate(0 4)"/>
+  <circle cx="400" cy="2" r="3" fill="currentColor"/>
+  <!-- Side domes -->
+  <path d="M 260 90 Q 260 70 280 68 Q 300 70 300 90"/>
+  <path d="M 500 90 Q 500 70 520 68 Q 540 70 540 90"/>
+
+  <!-- Right wing -->
+  <path d="M 640 208 V 140 H 760 V 208"/>
+  <line x1="660" y1="208" x2="660" y2="150"/>
+  <line x1="680" y1="208" x2="680" y2="150"/>
+  <line x1="700" y1="208" x2="700" y2="150"/>
+  <line x1="720" y1="208" x2="720" y2="150"/>
+  <line x1="740" y1="208" x2="740" y2="150"/>
+  <path d="M 640 140 L 700 110 L 760 140 Z"/>
+  <circle cx="700" cy="100" r="6"/>
+  <line x1="700" y1="94" x2="700" y2="82"/>
+  <path d="M 696 82 L 700 76 L 704 82"/>
+
+  <!-- Gateway base steps -->
+  <line x1="180" y1="208" x2="620" y2="208" stroke-width="1.4"/>
+  <line x1="200" y1="214" x2="600" y2="214" stroke-width="0.8" opacity="0.6"/>
+</svg>

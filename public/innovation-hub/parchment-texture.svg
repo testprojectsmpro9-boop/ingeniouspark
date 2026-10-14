@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Cream parchment texture overlay. Tile via CSS `background-repeat` or use as fixed bg.
+     Low-opacity grain + soft brown stains. Sized 320x320 for clean repeat. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" aria-hidden="true">
+  <defs>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.86  0 0 0 0 0.74  0 0 0 0 0.48  0 0 0 0.22 0"/>
+    </filter>
+    <filter id="softNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0.78  0 0 0 0 0.64  0 0 0 0 0.36  0 0 0 0.10 0"/>
+    </filter>
+  </defs>
+
+  <!-- Cream base -->
+  <rect width="320" height="320" fill="#FFF5D6"/>
+
+  <!-- Soft cloudy variation -->
+  <rect width="320" height="320" filter="url(#softNoise)" opacity="0.65"/>
+
+  <!-- Fine grain -->
+  <rect width="320" height="320" filter="url(#grain)" opacity="0.35"/>
+
+  <!-- Random subtle stains -->
+  <circle cx="42" cy="58" r="36" fill="#c9a064" opacity="0.06"/>
+  <circle cx="262" cy="86" r="48" fill="#c9a064" opacity="0.05"/>
+  <circle cx="184" cy="216" r="42" fill="#b88d4a" opacity="0.05"/>
+  <circle cx="76" cy="254" r="28" fill="#b88d4a" opacity="0.07"/>
+</svg>
