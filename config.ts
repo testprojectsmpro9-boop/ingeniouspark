@@ -2,7 +2,7 @@
 // Never add database credentials, secret keys, or connection strings here.
 
 // Production portal URL. Override locally via VITE_PORTAL_URL (e.g. http://localhost:5174 for dev).
-export const PORTAL_URL: string = (import.meta.env.VITE_PORTAL_URL as string | undefined) || "https://portal.ingeniouspark.in";
+export const PORTAL_URL: string = (import.meta.env.VITE_PORTAL_URL as string | undefined) || "https://sirmv-idea.com";
 
 // Reads VITE_API_URL from env; falls back to the production backend for release-safe builds.
 export const API_BASE_URL: string = (import.meta.env.VITE_API_URL as string | undefined) ?? "https://portalbackend.ingeniouspark.in";
